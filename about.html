@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>chin2</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <a href="/">
+                <li>home</li>
+            </a>
+            <a href="/about.html">
+                <li>about</li>
+            </a>
+            <a href="/projects.html">
+                <li>projects</li>
+            </a>
+            <a href="">
+                <li>resume</li>
+            </a>
+        </ul>
+    </nav>
+    <div class="dark-mode">
+        <i class="far" id="dark"></i>
+    </div>
+    <div class="animating-container">
+    </div>
+    <main class="about">
+        <div class="photo">
+        </div>
+        <div class="content">  
+            <span class="anim1">
+                Hi! I'm Vaibhav, a high school senior at Amity International School and a core member of Tech Syndicate, the school's computer club. I'm currently studying Physics, Chemistry and Maths.
+            </span> 
+            <br><br>
+            <span class="anim1">
+                I love to develop products that solve problems around me. I am interested in mobile and web development; I primarily work with JavaScript, Dart, and Python. I also like to animate stuff and I'm learning to design. 
+            </span>
+            <br><br>
+            <span class="anim1">
+                I love to play Basketball, watch documentaries, solve cubes and crack jokes.
+            </span>
+            <br><br>
+            <span class="anim1">
+                You can reach out to vs301vs@gmail.com or DM me on Instagram. I'm also on GitHub and LinkedIn.
+            </span>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script>
+        var timeline = gsap.timeline()
+            timeline.from('.photo', {scale: 0, duration: 0.5, opacity: 0, delay:0.5})
+            .from('.anim1', {opacity: 0, duration: 0.3, stagger: .2, y: -50})
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:display=swap');
+
+body{
+    font-family: 'Roboto Mono', monospace;
+    overflow: hidden;
+    background-color: var(--white);
+    --black: #2D2C2C;
+    --white: white;
+    transition-duration: all 0.5 ease;
+}
+
+body.dark{
+    --black: white;
+    --white: #2D2C2C; 
+}
+
+nav{
+    width: 100%;
+}
+
+nav ul{
+    margin-top: -0.2vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+nav ul a{
+    list-style: none;
+    text-decoration: none;
+    color: var(--black);
+    padding: 1vw;
+    font-size: 1.3vw;
+}
+
+.dark-mode{
+    position: absolute;
+    top: 0vw;
+    right: 7vw;
+    background-color: var(--black);
+    width: 2.5vw;
+    height: 4.5vw;
+    margin-top: -1vw;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.dark-mode i{
+    color: var(--white);
+    margin-bottom: 1vw;
+    cursor: pointer;
+}
+
+.animating-container{
+    width: 100%;
+    height: 100%;
+    background-color: var(--black);
+    z-index: 5;
+    position: absolute;
+    left: -100%;
+    top: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animate-text{
+    font-size: 3vw;
+    color: var(--white);
+}
+
+.loading{
+    width: 100vw;
+    height: 100vw;
+    background-color: var(--white);
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.main{
+    position: absolute;
+    width: 100%;
+    bottom: 0vw;
+    display: flex;
+    justify-content: center;
+}
+
+.black-box{
+    background-color: var(--black);
+    width: 24vw;
+    height: 30vw;
+    border-top-left-radius: 50vw;
+    border-top-right-radius: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.name{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 3vw;
+    color: var(--white);
+}
+
+.tags{
+    margin-top: 1vw;
+    text-align: center;
+    font-size: 1.5vw;
+    color: var(--white);
+}
+
+.about-btn{
+    width: 1.7vw;
+    height: 3.5vw;
+    border: 2px solid var(--white);
+    border-radius: 50px;
+    margin-bottom: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    cursor: pointer;
+}
+
+.circle{
+    width: 1.2vw;
+    height: 1.2vw;
+    margin-bottom: 0.3vw;
+    border-radius: 50px;
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+.about{
+    margin-top: 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo{
+    height: 13vw;
+    width: 13vw;
+    border-radius: 50%;
+    background-image: url('https://github.com/gigabite-pro.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.content{
+    margin-top: 2vw;
+    margin-left: 3vw;
+    width: 30vw;
+    color: var(--black);
+}
+
+.tab-box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.tabs{
+    margin-left: 3vw;
+    width: 25vw;
+    background-color: var(--white);
+    display: flex;
+    justify-content: stretch;
+}
+
+.tabs div{
+    flex-basis: 50%;
+    padding: 0.5vw 0.5vw;
+    font-size: 1vw;
+    font-weight: bold;
+    text-align: center;
+}
+
+.tabs div:hover{
+    cursor: pointer;
+}
+
+.codimg{
+    background-color: var(--black);
+    transition-duration: 300ms;
+    color: var(--white);
+}
+
+.youtube{
+    transition-duration: 300ms;
+    color: var(--black);
+}
+
+.projects-div{
+    display: flex;
+    justify-content: center;
+    width: 45vw;
+    margin: auto;
+    margin-top: 2vw;
+    flex-flow: wrap;
+}
+
+.card{
+    flex-basis: 1/2;
+    margin-top: 1vw;
+    margin-left: 3vw;
+    margin-bottom: 1vw;
+    width: 19vw;
+    font-size: 0.9vw;
+    border-radius: 14px;
+    border: 1px solid var(--black);
+    overflow: hidden;
+    /* box-shadow: 0 .5rem 1rem rgba(0,0,0,.15); */
+}
+
+.desc{
+    padding: 0.7vw;
+    padding-top: 0vw;
+    color: var(--black);
+}
+
+.proj-name{
+    color: var(--black);
+    font-size: 1.3vw;
+    font-weight: bold;
+    padding: 0.7vw;
+}
+
+.proj-image{
+    width: 100%;
+    height: 10vw;
+    margin: 0vw;
+}
+
+.links{
+    padding: 0.7vw;
+    padding-bottom: 1vw;
+}
+
+.links a{
+    color: var(--black);
+}

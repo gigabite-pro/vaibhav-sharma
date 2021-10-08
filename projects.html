@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>chin2</title>
+</head>
+<body style="overflow-y: scroll;">
+    <nav>
+        <ul class="anim4">
+            <a href="/">
+                <li>home</li>
+            </a>
+            <a href="about.html">
+                <li>about</li>
+            </a>
+            <a href="/projects.html">
+                <li>projects</li>
+            </a>
+            <a href="">
+                <li>resume</li>
+            </a>
+        </ul>
+    </nav>
+    <div class="dark-mode anim3">
+        <i class="far" id="dark"></i>
+    </div>
+    <main class="projects">
+        <div class="tab-box">
+            <div class="tabs" id="tabs">
+                <div class="codimg" id="codimg">
+                    Codimg
+                </div>
+                <div class="youtube" id="youtube">
+                    Youtube
+                </div>
+            </div>
+        </div>
+        <div class="projects-div" id="projects">
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script>
+        function animations(){
+            var timeline = gsap.timeline()
+            timeline.from('.card', {opacity: 0, y: 50, duration: 0.6, stagger: .2})
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
