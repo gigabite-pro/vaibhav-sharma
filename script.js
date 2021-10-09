@@ -13,6 +13,19 @@ const song = document.getElementById('music');
 song.volume = 0.2;
 song.play()
 
+document.getElementById('phone-nav-btn').addEventListener('click', ()=>{
+    var timeline3 = gsap.timeline()
+    timeline3.to('#phone-nav', {opacity: 1, scale: 1, left: '0%', top: '0%', duration: 0.5})
+    .from('.animp1', {opacity: 0, y: '-50', stagger: .1, duration: 0.3})
+})
+
+document.getElementById('cross').addEventListener('click', ()=>{
+    var timeline3 = gsap.timeline()
+    timeline3.to('.animp1', {opacity: 0, y: '-50', stagger: .1, duration: 0.3})
+    .to('#phone-nav', {opacity: 0, scale: 0, left: '100%', top: '-100%', duration: 0.5})
+    timeline3.set('.animp1', {opacity: 1, y: '0'})
+})
+
 
 document.getElementById('mute').addEventListener('click', ()=>{
     if(song.paused){
