@@ -1,4 +1,13 @@
-window.onload = function(){
+if(window.innerWidth < 800){
+    const dark = document.getElementById('darkp')
+    if(localStorage.getItem('toggled') == 'true'){
+        dark.classList.add('fa-sun')
+        document.body.classList.add('dark')
+    }else{
+        dark.classList.add('fa-moon')
+        document.body.classList.remove('dark')
+    }
+}else{
     const dark = document.getElementById('dark')
     if(localStorage.getItem('toggled') == 'true'){
         dark.classList.add('fa-sun')
@@ -7,11 +16,14 @@ window.onload = function(){
         dark.classList.add('fa-moon')
         document.body.classList.remove('dark')
     }
+
 }
 
-const song = document.getElementById('music');
-song.volume = 0.2;
-song.play()
+setTimeout(() => {
+    const song = document.getElementById('music');
+    song.volume = 0.2;
+    song.play()
+}, 3000);
 
 document.getElementById('phone-nav-btn').addEventListener('click', ()=>{
     var timeline3 = gsap.timeline()
@@ -27,19 +39,38 @@ document.getElementById('cross').addEventListener('click', ()=>{
 })
 
 
-document.getElementById('mute').addEventListener('click', ()=>{
-    if(song.paused){
-        song.play()
-        mute.classList.remove('fa-volume-up')
-        mute.classList.add('fa-volume-mute')
-    }else{
-        song.pause()
-        mute.classList.remove('fa-volume-mute')
-        mute.classList.add('fa-volume-up')
-    }
-})
 
-const dark = document.getElementById('dark')
+if(window.innerWidth < 800){
+    const mute = document.getElementById('mutep')
+    mute.addEventListener('click', ()=>{
+        if(song.paused){
+            song.play()
+            mute.classList.remove('fa-volume-up')
+            mute.classList.add('fa-volume-mute')
+        }else{
+            song.pause()
+            mute.classList.remove('fa-volume-mute')
+            mute.classList.add('fa-volume-up')
+        }
+    })
+}else{
+    const mute = document.getElementById('mute')
+    mute.addEventListener('click', ()=>{
+        if(song.paused){
+            song.play()
+            mute.classList.remove('fa-volume-up')
+            mute.classList.add('fa-volume-mute')
+        }else{
+            song.pause()
+            mute.classList.remove('fa-volume-mute')
+            mute.classList.add('fa-volume-up')
+        }
+    })
+}
+
+
+if(window.innerWidth < 786){
+    const dark = document.getElementById('darkp')
 var toggled = false
 dark.addEventListener('click', ()=>{
     if(toggled){
@@ -58,6 +89,27 @@ dark.addEventListener('click', ()=>{
         toggled = true
     }
 });
+}else{
+    const dark = document.getElementById('dark')
+    var toggled = false
+    dark.addEventListener('click', ()=>{
+        if(toggled){
+            gsap.to('body', {'--black': '#2D2C2C', duration: 0.5})
+            gsap.to('body', {'--white': 'white', duration: 0.5})
+            localStorage.setItem('toggled', false)
+            dark.classList.remove('fa-sun')
+            dark.classList.add('fa-moon')
+            toggled = false
+        }else{
+            gsap.to('body', {'--black': 'white', duration: 0.5})
+            gsap.to('body', {'--white': '#2D2C2C', duration: 0.5})
+            localStorage.setItem('toggled', true)
+            dark.classList.remove('fa-moon')
+            dark.classList.add('fa-sun')
+            toggled = true
+        }
+    });
+}
 
 codimgProjects = {
     1 : {
@@ -236,28 +288,31 @@ function showEditing(){
     animations()
 }
 
-const codimg = document.getElementById('codimg')
-const youtube = document.getElementById('youtube')
-var tabToggled = false
+function listen(){
+    const codimg = document.getElementById('codimg')
+    const youtube = document.getElementById('youtube')
+    var tabToggled = false
 
-youtube.addEventListener('click', ()=>{
-    if(localStorage.getItem('toggled') == 'false'){
-        gsap.to('#codimg', {backgroundColor: 'var(--white)', color: 'var(--black)', duration: 0.3})
-        gsap.to('#youtube', {backgroundColor: 'var(--black)', color: 'var(--white)', duration: 0.3})
-    }else{
-        gsap.to('#codimg', {backgroundColor: 'var(--white)', color: 'var(--black)', duration: 0.3})
-        gsap.to('#youtube', {backgroundColor: 'var(--black)', color: 'var(--white)', duration: 0.3}) 
-    }
-    showEditing()
-})
+    youtube.addEventListener('click', ()=>{
+        if(localStorage.getItem('toggled') == 'false'){
+            gsap.to('#codimg', {backgroundColor: 'var(--white)', color: 'var(--black)', duration: 0.3})
+            gsap.to('#youtube', {backgroundColor: 'var(--black)', color: 'var(--white)', duration: 0.3})
+        }else{
+            gsap.to('#codimg', {backgroundColor: 'var(--white)', color: 'var(--black)', duration: 0.3})
+            gsap.to('#youtube', {backgroundColor: 'var(--black)', color: 'var(--white)', duration: 0.3}) 
+        }
+        showEditing()
+    })
 
-codimg.addEventListener('click', ()=>{
-    if(localStorage.getItem('toggled') == 'false'){
-        gsap.to('#codimg', {backgroundColor: 'var(--black)', color: 'var(--white)', duration: 0.3})
-        gsap.to('#youtube', {backgroundColor: 'var(--white)', color: 'var(--black)', duration: 0.3})
-    }else{
-        gsap.to('#codimg', {backgroundColor: 'var(--black)', color: 'var(--white)', duration: 0.3})
-        gsap.to('#youtube', {backgroundColor: 'var(--white)', color: 'var(--black)', duration: 0.3}) 
-    }
-    showCodimg()
-})
+    codimg.addEventListener('click', ()=>{
+        if(localStorage.getItem('toggled') == 'false'){
+            gsap.to('#codimg', {backgroundColor: 'var(--black)', color: 'var(--white)', duration: 0.3})
+            gsap.to('#youtube', {backgroundColor: 'var(--white)', color: 'var(--black)', duration: 0.3})
+        }else{
+            gsap.to('#codimg', {backgroundColor: 'var(--black)', color: 'var(--white)', duration: 0.3})
+            gsap.to('#youtube', {backgroundColor: 'var(--white)', color: 'var(--black)', duration: 0.3}) 
+        }
+        showCodimg()
+    })
+
+}

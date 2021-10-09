@@ -40,6 +40,10 @@ body.dark{
     display: none;
 }
 
+.phone-nav-btn{
+    display: none;
+}
+
 nav{
     width: 100%;
 }
@@ -251,6 +255,8 @@ nav ul a{
         overflow: hidden;
         width: 100vw;
         height: 100vh;
+        margin: 0;
+        padding: 0;
     }
 
     nav{
@@ -258,6 +264,7 @@ nav ul a{
     }
 
     .phone-nav-btn{
+        display: block;
         position: absolute;
         top: 5vw;
         right: 7vw;
@@ -321,7 +328,7 @@ nav ul a{
     }
 
     .name{
-        font-size: 10vw;
+        font-size: 9vw;
     }
 
     .tags{
@@ -365,6 +372,7 @@ nav ul a{
         width: 80vw;
         flex-basis: 1;
         font-size: 4vw;
+        margin-top: 5vw;
     }
 
     .desc{
