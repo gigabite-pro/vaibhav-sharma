@@ -12,7 +12,7 @@ window.onload = function(){
         const song = document.getElementById('music');
         song.volume = 0.2;
         song.play()
-    }, 3000);
+    }, 5000);
 }
 
 
