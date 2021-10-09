@@ -348,6 +348,7 @@ nav ul a{
         width: 90vw;
         margin-left: 0vw;
         font-size: 4vw;
+        margin-bottom: 4vw;
     }
 
     .tab-box{
@@ -366,6 +367,7 @@ nav ul a{
 
     .projects-div{
         width: 100vw;
+        margin-bottom: 4vw;
     }
 
     .card{
