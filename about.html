@@ -12,7 +12,7 @@
     <link rel="shortcut icon" href="assets/favicon.jpg" type="image/x-icon">
     <title>chin2</title>
 </head>
-<body style="overflow-y: scroll;">
+<body id="about-body">
     <nav>
         <ul>
             <a href="/">
@@ -92,8 +92,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script>
         var timeline = gsap.timeline()
-            timeline.from('.photo', {scale: 0, duration: 0.5, opacity: 0, delay:0.5})
-            .from('.anim1', {opacity: 0, duration: 0.3, stagger: .2, y: -50})
+        timeline.from('.photo', {scale: 0, duration: 0.5, opacity: 0, delay:0.5})
+        .from('.anim1', {opacity: 0, duration: 0.3, stagger: .2, y: -50})
+        
+        if(window.innerWidth < 786){
+            document.getElementById('about-body').style.overflowY = 'scroll';
+        }
     </script>
     <script src="script.js"></script>
     <script src="bg.js"></script>

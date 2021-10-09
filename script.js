@@ -73,24 +73,24 @@ if(window.innerWidth < 800){
 
 if(window.innerWidth < 786){
     const dark = document.getElementById('darkp')
-var toggled = false
-dark.addEventListener('click', ()=>{
-    if(toggled){
-        gsap.to('body', {'--black': '#2D2C2C', duration: 0.5})
-        gsap.to('body', {'--white': 'white', duration: 0.5})
-        localStorage.setItem('toggled', false)
-        dark.classList.remove('fa-sun')
-        dark.classList.add('fa-moon')
-        toggled = false
-    }else{
-        gsap.to('body', {'--black': 'white', duration: 0.5})
-        gsap.to('body', {'--white': '#2D2C2C', duration: 0.5})
-        localStorage.setItem('toggled', true)
-        dark.classList.remove('fa-moon')
-        dark.classList.add('fa-sun')
-        toggled = true
-    }
-});
+    var toggled = false
+    dark.addEventListener('click', ()=>{
+        if(toggled){
+            gsap.to('body', {'--black': '#2D2C2C', duration: 0.5})
+            gsap.to('body', {'--white': 'white', duration: 0.5})
+            localStorage.setItem('toggled', false)
+            dark.classList.remove('fa-sun')
+            dark.classList.add('fa-moon')
+            toggled = false
+        }else{
+            gsap.to('body', {'--black': 'white', duration: 0.5})
+            gsap.to('body', {'--white': '#2D2C2C', duration: 0.5})
+            localStorage.setItem('toggled', true)
+            dark.classList.remove('fa-moon')
+            dark.classList.add('fa-sun')
+            toggled = true
+        }
+    });
 }else{
     const dark = document.getElementById('dark')
     var toggled = false

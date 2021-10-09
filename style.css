@@ -2,8 +2,7 @@
 
 body{
     font-family: 'Roboto Mono', monospace;
-    overflow-x: hidden;
-    overflow-y: scroll;
+    overflow: hidden;
     background-color: var(--white);
     --black: #2D2C2C;
     --white: white;
@@ -129,7 +128,7 @@ nav ul a{
 }
 
 .about{
-    margin-top: 3vw;
+    margin-top: 1vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
