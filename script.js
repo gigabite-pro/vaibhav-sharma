@@ -7,6 +7,12 @@ window.onload = function(){
         dark.classList.add('fa-moon')
         document.body.classList.remove('dark')
     }
+
+    setTimeout(() => {
+        const song = document.getElementById('music');
+        song.volume = 0.2;
+        song.play()
+    }, 3000);
 }
 
 

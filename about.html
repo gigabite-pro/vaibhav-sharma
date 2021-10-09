@@ -63,11 +63,6 @@
         var timeline = gsap.timeline()
             timeline.from('.photo', {scale: 0, duration: 0.5, opacity: 0, delay:0.5})
             .from('.anim1', {opacity: 0, duration: 0.3, stagger: .2, y: -50})
-            setTimeout(() => {
-                const song = document.getElementById('music');
-                song.volume = 0.2;
-                song.play()
-            }, 3000);
     </script>
     <script src="script.js"></script>
     <script src="bg.js"></script>
