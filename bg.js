@@ -1,5 +1,4 @@
 if(window.innerWidth > 800){
-  console.log(window.innerWidth)
   const colors = ['var(--black)'];
 
 const numBalls = 50;

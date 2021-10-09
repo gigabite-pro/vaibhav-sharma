@@ -41,6 +41,7 @@ document.getElementById('cross').addEventListener('click', ()=>{
 
 
 if(window.innerWidth < 800){
+    const song = document.getElementById('music');
     const mute = document.getElementById('mutep')
     mute.addEventListener('click', ()=>{
         if(song.paused){
@@ -54,6 +55,7 @@ if(window.innerWidth < 800){
         }
     })
 }else{
+    const song = document.getElementById('music');
     const mute = document.getElementById('mute')
     mute.addEventListener('click', ()=>{
         if(song.paused){
