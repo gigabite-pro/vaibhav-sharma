@@ -57,9 +57,11 @@
             var timeline = gsap.timeline()
             timeline.from('.card', {opacity: 0, y: 50, duration: 0.6, stagger: .2})
         }
-        const song = document.getElementById('music');
-            song.volume = 0.2;
-            song.play()
+        setTimeout(() => {
+                const song = document.getElementById('music');
+                song.volume = 0.2;
+                song.play()
+        }, 3000);
     </script>
     <script src="script.js"></script>
     <script>

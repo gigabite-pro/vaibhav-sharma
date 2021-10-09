@@ -42,7 +42,7 @@
         </div>
         <div class="content">  
             <span class="anim1">
-                Hi! I'm Vaibhav, a high school senior at Amity International School and a core member of Tech Syndicate, the school's computer club. I'm currently studying Physics, Chemistry and Maths.
+                Hi! I'm Vaibhav, a high school senior at Amity International School and a core member of <a href="https://techsyndicate.club/" target="_blank">Tech Syndicate</a>, the school's computer club. I'm also the Vice President of the <a href="https://cybercongressais46.herokuapp.com/" target="_blank">Cyber Congress</a>  of my school. I'm currently studying Physics, Chemistry and Maths.
             </span> 
             <br><br>
             <span class="anim1">
@@ -63,9 +63,11 @@
         var timeline = gsap.timeline()
             timeline.from('.photo', {scale: 0, duration: 0.5, opacity: 0, delay:0.5})
             .from('.anim1', {opacity: 0, duration: 0.3, stagger: .2, y: -50})
-            const song = document.getElementById('music');
-            song.volume = 0.2;
-            song.play()
+            setTimeout(() => {
+                const song = document.getElementById('music');
+                song.volume = 0.2;
+                song.play()
+            }, 3000);
     </script>
     <script src="script.js"></script>
     <script src="bg.js"></script>

@@ -56,9 +56,11 @@
             .from('.tags', {opacity: 0, y: -50, duration: 0.3})
             .from('.anim3', {y: -50, duration: 0.5})
             .from('.anim4', {opacity: 0, y: -50, duration: 0.5}, '-=1')
-            const song = document.getElementById('music');
-            song.volume = 0.2;
-            song.play()
+            setTimeout(() => {
+                const song = document.getElementById('music');
+                song.volume = 0.2;
+                song.play()
+            }, 3000);
     </script>
     <script src="script.js"></script>
     <script src="bg.js"></script>
