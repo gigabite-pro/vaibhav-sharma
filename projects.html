@@ -28,8 +28,14 @@
             </a>
         </ul>
     </nav>
+    <audio id="music" loop>
+        <source src="/assets/music.mp3" type="audio/mpeg">
+    </audio>
     <div class="dark-mode anim3">
         <i class="far" id="dark"></i>
+    </div>
+    <div class="mute anim3">
+        <i class="fas fa-volume-mute" id="mute"></i>
     </div>
     <main class="projects">
         <div class="tab-box">
@@ -38,7 +44,7 @@
                     Codimg
                 </div>
                 <div class="youtube" id="youtube">
-                    Youtube
+                    A/V Editing
                 </div>
             </div>
         </div>
@@ -51,7 +57,14 @@
             var timeline = gsap.timeline()
             timeline.from('.card', {opacity: 0, y: 50, duration: 0.6, stagger: .2})
         }
+        const song = document.getElementById('music');
+            song.volume = 0.2;
+            song.play()
     </script>
     <script src="script.js"></script>
+    <script>
+        showCodimg()
+    </script>
+    <script src="bgproj.js"></script>
 </body>
 </html>

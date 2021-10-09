@@ -9,6 +9,19 @@ window.onload = function(){
     }
 }
 
+
+document.getElementById('mute').addEventListener('click', ()=>{
+    if(song.paused){
+        song.play()
+        mute.classList.remove('fa-volume-up')
+        mute.classList.add('fa-volume-mute')
+    }else{
+        song.pause()
+        mute.classList.remove('fa-volume-mute')
+        mute.classList.add('fa-volume-up')
+    }
+})
+
 const dark = document.getElementById('dark')
 var toggled = false
 dark.addEventListener('click', ()=>{
@@ -28,30 +41,6 @@ dark.addEventListener('click', ()=>{
         toggled = true
     }
 });
-
-const codimg = document.getElementById('codimg')
-const youtube = document.getElementById('youtube')
-var tabToggled = false
-
-youtube.addEventListener('click', ()=>{
-    if(localStorage.getItem('toggled') == 'false'){
-        gsap.to('#codimg', {backgroundColor: 'var(--white)', color: 'var(--black)', duration: 0.3})
-        gsap.to('#youtube', {backgroundColor: 'var(--black)', color: 'var(--white)', duration: 0.3})
-    }else{
-        gsap.to('#codimg', {backgroundColor: 'var(--white)', color: 'var(--black)', duration: 0.3})
-        gsap.to('#youtube', {backgroundColor: 'var(--black)', color: 'var(--white)', duration: 0.3}) 
-    }
-})
-
-codimg.addEventListener('click', ()=>{
-    if(localStorage.getItem('toggled') == 'false'){
-        gsap.to('#codimg', {backgroundColor: 'var(--black)', color: 'var(--white)', duration: 0.3})
-        gsap.to('#youtube', {backgroundColor: 'var(--white)', color: 'var(--black)', duration: 0.3})
-    }else{
-        gsap.to('#codimg', {backgroundColor: 'var(--black)', color: 'var(--white)', duration: 0.3})
-        gsap.to('#youtube', {backgroundColor: 'var(--white)', color: 'var(--black)', duration: 0.3}) 
-    }
-})
 
 codimgProjects = {
     1 : {
@@ -134,12 +123,66 @@ codimgProjects = {
 
 }
 
+
+youtubeProjects = {
+    1 : {
+        name: 'Callistec',
+        image: '/assets/callistec.gif',
+        desc: "A promotional video made for a mobile phone that was created for an event, Alphabit, held by AIS-Saket.",
+        link: 'https://youtu.be/4YLXiQW2RhQ'
+    },
+    2 : {
+        name: 'Riso',
+        image: '/assets/riso.gif',
+        desc: "A promotional video of our product made for Code Wars 21 organized by DPS Vasant Kunj.",
+        link: 'https://youtu.be/gNqgx1BNQ6U'
+    },
+    3 : {
+        name: 'Robotronics Closing',
+        image: '/assets/robo_closing.gif',
+        desc: "The official closing video made for Robotronics 2021, the flagship event of Tech Syndicate, the tech club of AISG-46.",
+        link: 'https://youtu.be/aOh8vcir49E'
+    },
+    4 : {
+        name: 'Cybercongress Intro',
+        image: '/assets/cc.gif',
+        desc: "An introduction video made for the Cyberbercongress of AISG-46 showing the online platform and the work done by the organization.",
+        link: 'https://youtu.be/7vSl-CQM4V0'
+    },
+    5 : {
+        name: 'Vocabathon 21',
+        image: '/assets/vocabathon21.gif',
+        desc: "Promotional video made for the vocabulary competition organized by AISG-46.",
+        link: 'https://youtu.be/y2Xx3wRLaxI'
+    },
+    6 : {
+        name: 'Robotronics Opening',
+        image: '/assets/robo_opening.gif',
+        desc: "The official teaser made for Robotronics 2021, the flagship event of Tech Syndicate, the tech club of AISG-46.",
+        link: 'https://youtu.be/fwLEBs853IE'
+    },
+    7 : {
+        name: 'Summer Horizon',
+        image: '/assets/summer_horizon.gif',
+        desc: "The official closing video made for Summer Horizon, a tech bootcamp organized by Tech Syndicate, the tech club of AISG-46.",
+        link: 'https://youtu.be/FpUHrM7xAug'
+    },
+    8 : {
+        name: 'TedxYouth 2021',
+        image: '/assets/tedx20.gif',
+        desc: "The making of TedxYouth, a TED-talk event organized by AISG-46.",
+        link: 'https://youtu.be/481XDJfSrxo'
+    },
+}
+
+
 projects = document.getElementById('projects');
 
 function showCodimg(){
+    projects.innerHTML = ``
     for(let i=1; i <= 11; i++){
         projects.innerHTML += `<div class="card">
-        <div class="proj-image" style="background-image: url('${codimgProjects[i].image}'); background-position: center; background-size: cover;">
+        <div class="proj-image" style="background-image: url('${codimgProjects[i].image}'); background-position: center; background-size: cover; background-repeat: no-repeat;">
         </div>
         <div class="proj-name">
         ${codimgProjects[i].name}
@@ -148,14 +191,56 @@ function showCodimg(){
         ${codimgProjects[i].desc}
         </div>
         <div class="links">
-            <a href=${codimgProjects[i].ghLink} target="_blank">Project</a>
-            <a href=${codimgProjects[i].link} target="_blank">Live</a>
+            <a href=${codimgProjects[i].ghLink} target="_blank">project</a>
+            <a href=${codimgProjects[i].link} target="_blank">live</a>
         </div>
     </div>`
     }
-
-    projects.style.display = 'flex';
     animations()
 }
 
-showCodimg()
+function showEditing(){
+    projects.innerHTML = ``
+    for(let i=1; i <= 8; i++){
+        projects.innerHTML += `<div class="card bordered">
+        <div class="proj-image" style="background-image: url('${youtubeProjects[i].image}'); background-position: center; background-size: cover; background-repeat: no-repeat;">
+        </div>
+        <div class="proj-name">
+        ${youtubeProjects[i].name}
+        </div>
+        <div class="desc">
+        ${youtubeProjects[i].desc}
+        </div>
+        <div class="links">
+            <a href=${youtubeProjects[i].link} target="_blank">youtube</a>
+        </div>
+    </div>`
+    }
+    animations()
+}
+
+const codimg = document.getElementById('codimg')
+const youtube = document.getElementById('youtube')
+var tabToggled = false
+
+youtube.addEventListener('click', ()=>{
+    if(localStorage.getItem('toggled') == 'false'){
+        gsap.to('#codimg', {backgroundColor: 'var(--white)', color: 'var(--black)', duration: 0.3})
+        gsap.to('#youtube', {backgroundColor: 'var(--black)', color: 'var(--white)', duration: 0.3})
+    }else{
+        gsap.to('#codimg', {backgroundColor: 'var(--white)', color: 'var(--black)', duration: 0.3})
+        gsap.to('#youtube', {backgroundColor: 'var(--black)', color: 'var(--white)', duration: 0.3}) 
+    }
+    showEditing()
+})
+
+codimg.addEventListener('click', ()=>{
+    if(localStorage.getItem('toggled') == 'false'){
+        gsap.to('#codimg', {backgroundColor: 'var(--black)', color: 'var(--white)', duration: 0.3})
+        gsap.to('#youtube', {backgroundColor: 'var(--white)', color: 'var(--black)', duration: 0.3})
+    }else{
+        gsap.to('#codimg', {backgroundColor: 'var(--black)', color: 'var(--white)', duration: 0.3})
+        gsap.to('#youtube', {backgroundColor: 'var(--white)', color: 'var(--black)', duration: 0.3}) 
+    }
+    showCodimg()
+})

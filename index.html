@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/blobz.min.css">
+    <link rel="stylesheet" href="style.css">
     <title>chin2</title>
 </head>
 <body>
@@ -28,35 +29,40 @@
             </a>
         </ul>
     </nav>
+    <audio id="music" loop>
+        <source src="/assets/music.mp3" type="audio/mpeg">
+    </audio>
     <div class="dark-mode anim3">
         <i class="far" id="dark"></i>
     </div>
-    <div class="animating-container">
+    <div class="mute anim3">
+        <i class="fas fa-volume-mute" id="mute"></i>
     </div>
     <main class="main">
-        <div class="black-box">
-            <div class="about-btn anim1">
-                <div class="circle"></div>
-            </div>
-            <div class="name anim1">
-                Vaibhav <br>Sharma
-            </div>
-            <div class="tags anim1">
-                <span class="anim2">Developer </span><br>
-                <span class="anim2">A/V Editor</span><br>
-                <span class="anim2">UI/UX Designer</span>
-            </div>
+        <div class="name">
+            Vaibhav Sharma
+        </div>
+        <div class="tags">
+            <h1 class="typewrite" data-period="200" data-type='["developer.", "a/v editor.","ui/ux designer." , "basketball player."]'>
+            <span class="wrap"></span>
         </div>
     </main>
+    <canvas data-v-c2160f6c="" width="62" height="62" class="js-canvas canvas" style></canvas>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script>
             var timeline = gsap.timeline()
-            timeline.from('.black-box', {opacity: 0, duration: 0.7, y: 200})
-            .from('.anim1', {opacity: 0, duration: 0.5, y: -50}, '-=0.2')
-            .from('.anim2', {opacity: 0, y: -50, duration: 0.5, stagger: .2}, '-=0.1')
-            .from('.anim3', {opacity: 0, rotation: -90, duration: 0.5})
-            .from('.anim4', {opacity: 0, y: -50, duration: 0.5}, '-=2')
-        </script>
+            timeline.from('.name', {opacity:0, y: -50, duration: 0.3})
+            .from('.tags', {opacity: 0, y: -50, duration: 0.3})
+            .from('.anim3', {y: -50, duration: 0.5})
+            .from('.anim4', {opacity: 0, y: -50, duration: 0.5}, '-=1')
+            const song = document.getElementById('music');
+            song.volume = 0.2;
+            song.play()
+    </script>
     <script src="script.js"></script>
+    <script src="bg.js"></script>
+    <script src="typewrite.js"></script>
+    <script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
+    <script src="blob.js"></script>
 </body>
 </html>
