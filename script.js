@@ -7,6 +7,14 @@ if(window.innerWidth < 800){
         dark.classList.add('fa-moon')
         document.body.classList.remove('dark')
     }
+
+    const mute = document.getElementById('mutep')
+    if(localStorage.getItem('musicToggle') == 'true'){
+        mute.classList.add('fa-volume-mute')
+    }else{
+        mute.classList.add('fa-volume-up')
+    }
+
 }else{
     const dark = document.getElementById('dark')
     if(localStorage.getItem('toggled') == 'true'){
@@ -17,12 +25,21 @@ if(window.innerWidth < 800){
         document.body.classList.remove('dark')
     }
 
+    const mute = document.getElementById('mute')
+    if(localStorage.getItem('musicToggle') == 'true'){
+        mute.classList.add('fa-volume-mute')
+    }else{
+        mute.classList.add('fa-volume-up')
+    }
+
 }
 
 setTimeout(() => {
-    const song = document.getElementById('music');
-    song.volume = 0.2;
-    song.play()
+    if(localStorage.getItem('musicToggle') == 'true'){
+        const song = document.getElementById('music');
+        song.volume = 0.1;
+        song.play()   
+    }
 }, 3000);
 
 document.getElementById('phone-nav-btn').addEventListener('click', ()=>{
@@ -45,13 +62,16 @@ if(window.innerWidth < 800){
     const mute = document.getElementById('mutep')
     mute.addEventListener('click', ()=>{
         if(song.paused){
+            song.volume = 0.1;
             song.play()
             mute.classList.remove('fa-volume-up')
             mute.classList.add('fa-volume-mute')
+            localStorage.setItem('musicToggle', true)
         }else{
             song.pause()
             mute.classList.remove('fa-volume-mute')
             mute.classList.add('fa-volume-up')
+            localStorage.setItem('musicToggle', false)
         }
     })
 }else{
@@ -59,13 +79,16 @@ if(window.innerWidth < 800){
     const mute = document.getElementById('mute')
     mute.addEventListener('click', ()=>{
         if(song.paused){
+            song.volume = 0.1;
             song.play()
             mute.classList.remove('fa-volume-up')
             mute.classList.add('fa-volume-mute')
+            localStorage.setItem('musicToggle', true)
         }else{
             song.pause()
             mute.classList.remove('fa-volume-mute')
             mute.classList.add('fa-volume-up')
+            localStorage.setItem('musicToggle', false)
         }
     })
 }
