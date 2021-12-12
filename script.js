@@ -177,7 +177,7 @@ codimgProjects = {
         image: 'https://socialify.git.ci/gigabite-pro/covizab/image?description=1&font=Source%20Code%20Pro&forks=1&issues=1&language=1&owner=1&pattern=Circuit%20Board&pulls=1&stargazers=1&theme=Dark',
         desc: 'A single-page website redesigning and redefining the vaccine for Covid-19.',
         ghLink: 'https://github.com/gigabite-pro/covizab',
-        link: ''
+        link: 'https://covizab.netlify.app'
     },
     7 : {
         name: 'Baatcheet',
