@@ -1,6 +1,3 @@
-window.onload = ()=>{
-    localStorage.setItem('toggled', 'false')
-}
 if(window.innerWidth < 800){
     const dark = document.getElementById('darkp')
     if(localStorage.getItem('toggled') == 'true'){
@@ -99,7 +96,7 @@ if(window.innerWidth < 800){
 
 if(window.innerWidth < 786){
     const dark = document.getElementById('darkp')
-    var toggled = true
+    var toggled = false
     dark.addEventListener('click', ()=>{
         if(toggled){
             gsap.to('body', {'--black': '#2D2C2C', duration: 0.5})
