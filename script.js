@@ -1,3 +1,6 @@
+window.onload = ()=>{
+    localStorage.setItem('toggled', 'false')
+}
 if(window.innerWidth < 800){
     const dark = document.getElementById('darkp')
     if(localStorage.getItem('toggled') == 'true'){
@@ -96,7 +99,7 @@ if(window.innerWidth < 800){
 
 if(window.innerWidth < 786){
     const dark = document.getElementById('darkp')
-    var toggled = false
+    var toggled = true
     dark.addEventListener('click', ()=>{
         if(toggled){
             gsap.to('body', {'--black': '#2D2C2C', duration: 0.5})
@@ -116,7 +119,7 @@ if(window.innerWidth < 786){
     });
 }else{
     const dark = document.getElementById('dark')
-    var toggled = false
+    var toggled = true
     dark.addEventListener('click', ()=>{
         if(toggled){
             gsap.to('body', {'--black': '#2D2C2C', duration: 0.5})
@@ -166,48 +169,62 @@ codimgProjects = {
         link: 'https://impro.gq/'
     },
     5 : {
+        name: 'Codr',
+        image: 'https://socialify.git.ci/gigabite-pro/codr/image?description=1&font=Source%20Code%20Pro&forks=1&language=1&name=1&owner=1&pattern=Circuit%20Board&pulls=1&stargazers=1&theme=Dark',
+        desc: "Codr will allow users to create new projects of varying technologies, view older projects, and search for projects using a specific command for each technology. It uses CSV files instead of a SQL database to reduce external dependencies.",
+        ghLink: 'https://github.com/gigabite-pro/codr',
+        link: ''
+    },
+    6 : {
         name: 'Muvi API',
         image: 'https://socialify.git.ci/cotnw/muvi/image?description=1&font=Source%20Code%20Pro&forks=1&issues=1&language=1&owner=1&pattern=Circuit%20Board&pulls=1&stargazers=1&theme=Dark',
         desc: "A chrome extension to download movies directly from a Google search.",
         ghLink: 'https://github.com/cotnw/muvi-api',
         link: 'https://github.com/cotnw/muvi'
     },
-    6 : {
+    7 : {
         name: 'Covizab',
         image: 'https://socialify.git.ci/gigabite-pro/covizab/image?description=1&font=Source%20Code%20Pro&forks=1&issues=1&language=1&owner=1&pattern=Circuit%20Board&pulls=1&stargazers=1&theme=Dark',
         desc: 'A single-page website redesigning and redefining the vaccine for Covid-19.',
         ghLink: 'https://github.com/gigabite-pro/covizab',
         link: ''
     },
-    7 : {
+    8 : {
         name: 'Baatcheet',
         image: 'https://socialify.git.ci/gigabite-pro/baatcheet/image?description=1&font=Source%20Code%20Pro&forks=1&issues=1&language=1&owner=1&pattern=Circuit%20Board&pulls=1&stargazers=1&theme=Dark',
         desc: "Baatcheet creates appointments for people with bad mental health(Users) with people who want to listen to them (Therapists) along with a google meet link and the addition of an event to the user's and the therapist's google calendar. It also has a chillzone controlled by voice commands which suggests movies, shows quotes and memes.",
         ghLink: 'https://github.com/gigabite-pro/baatcheet',
         link: 'https://baattcheet.herokuapp.com/'
     },
-    8 : {
+    9 : {
         name: 'Bharat Mystery App',
         image: 'https://socialify.git.ci/gigabite-pro/Bharat-Mystery-Mobile/image?description=1&font=Source%20Code%20Pro&forks=1&issues=1&language=1&owner=1&pattern=Circuit%20Board&pulls=1&stargazers=1&theme=Dark',
         desc: "Bharat Mystery, which is a VR (Virtual Reality) based mobile application, accompanied by a physical board game that enables the user to explore the various cultural and historical tourist destinations of India. It also encompasses various economic aspects through the promotion of local souvenir shops.",
         ghLink: 'https://github.com/gigabite-pro/Bharat-Mystery-Mobile',
         link: 'https://drive.google.com/drive/folders/1lQZ4eqWbVpkcA5KavzW4JXMY4xeA93hi?usp=sharing'
     },
-    9 : {
+    10 : {
         name: 'Eduport',
         image: 'https://socialify.git.ci/gigabite-pro/eduport/image?description=1&font=Source%20Code%20Pro&forks=1&issues=1&language=1&owner=1&pattern=Circuit%20Board&pulls=1&stargazers=1&theme=Dark',
         desc: 'A platform made for Amihacks, a hackathon organised by Amity University, Noida. It is a LMS platform for small tuitions and coaching centres to maintain records of students such as attendance, marks or to upload assignments, tests.',
         ghLink: 'https://github.com/gigabite-pro/eduport',
         link: 'https://eduport-web.herokuapp.com/'
     },
-    10 : {
+    11 : {
+        name: 'OompaGG',
+        image: 'https://socialify.git.ci/techsyndicate/exun-21/image?description=1&font=Source%20Code%20Pro&forks=1&language=1&name=1&owner=1&pattern=Circuit%20Board&pulls=1&stargazers=1&theme=Dark',
+        desc: "Our solution to this is OompaGG, a mobile web app that will automate the verification of certain tasks performed. Along with that, we are gamifying the whole process to incentivise them to complete the maximum number of tasks by providing rewards on their completion.",
+        ghLink: 'https://github.com/techsyndicate/exun-21',
+        link: 'https://devpost.com/software/oompagg'
+    },
+    12 : {
         name: 'Movie Logger',
         image: 'https://socialify.git.ci/gigabite-pro/movie-logger/image?description=1&font=Source%20Code%20Pro&forks=1&issues=1&language=1&owner=1&pattern=Circuit%20Board&pulls=1&stargazers=1&theme=Dark',
         desc: "Project made in Summer Horizon tech bootcamp organized at AISG-46 where I taught web development to the students of junior school.",
         ghLink: 'https://github.com/gigabite-pro/movie-logger',
         link: 'https://movie-logger.netlify.app/'
     },
-    11 : {
+    13 : {
         name: 'Tedx@AISG46 2020',
         image: 'https://socialify.git.ci/gigabite-pro/tedx-2020/image?description=1&font=Source%20Code%20Pro&forks=1&issues=1&language=1&owner=1&pattern=Circuit%20Board&pulls=1&stargazers=1&theme=Dark',
         desc: "The official website for TedxYouth@AISG46 2020.",
@@ -262,13 +279,18 @@ youtubeProjects = {
         link: 'https://youtu.be/FpUHrM7xAug'
     },
     8 : {
+        name: 'Oompalicious',
+        image: '/assets/oompagg.webp',
+        desc: "A promotional video of our product made for Exun 21 organized by DPS RK Puram.",
+        link: 'https://youtu.be/Q6EDxWg7Y8w'
+    },
+    9 : {
         name: 'TedxYouth 2021',
         image: '/assets/tedx20.gif',
         desc: "The making of TedxYouth, a TED-talk event organized by AISG-46.",
         link: 'https://youtu.be/481XDJfSrxo'
     },
 }
-
 
 projects = document.getElementById('projects');
 
