@@ -259,6 +259,11 @@ nav ul a{
         padding: 0;
     }
 
+    ::-webkit-scrollbar {
+        width: 0vw;
+        display: none;
+    }
+
     nav{
         display: none;
     }
