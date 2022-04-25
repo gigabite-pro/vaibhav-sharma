@@ -1,5 +1,4 @@
-if(window.innerWidth > 800){
-  const colors = ['var(--black)'];
+const colors = ['var(--black)'];
 
 const numBalls = 50;
 const balls = [];
@@ -42,5 +41,3 @@ balls.forEach((el, i, ra) => {
       }
     );
   });
-
-}
