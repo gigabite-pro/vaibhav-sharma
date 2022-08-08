@@ -108,42 +108,48 @@ youtubeProjects = {
         link: 'https://youtu.be/gNqgx1BNQ6U'
     },
     3 : {
+        name: 'Amigmun Closing',
+        image: '/assets/amigmun.gif',
+        desc: "The official closing video made for Amigmun 2022, the flagship event of MUN Society of AISG-46.",
+        link: 'https://youtu.be/V81FzUWXK0I'
+    },
+    4 : {
         name: 'Robotronics Closing',
         image: '/assets/robo_closing.gif',
         desc: "The official closing video made for Robotronics 2021, the flagship event of Tech Syndicate, the tech club of AISG-46.",
         link: 'https://youtu.be/aOh8vcir49E'
     },
-    4 : {
+    5 : {
         name: 'Cybercongress Intro',
         image: '/assets/cc.gif',
         desc: "An introduction video made for the Cyberbercongress of AISG-46 showing the online platform and the work done by the organization.",
         link: 'https://youtu.be/7vSl-CQM4V0'
     },
-    5 : {
+    6 : {
         name: 'Vocabathon 21',
         image: '/assets/vocabathon21.gif',
         desc: "Promotional video made for the vocabulary competition organized by AISG-46.",
         link: 'https://youtu.be/y2Xx3wRLaxI'
     },
-    6 : {
+    7 : {
         name: 'Robotronics Opening',
         image: '/assets/robo_opening.gif',
         desc: "The official teaser made for Robotronics 2021, the flagship event of Tech Syndicate, the tech club of AISG-46.",
         link: 'https://youtu.be/fwLEBs853IE'
     },
-    7 : {
+    8 : {
         name: 'Summer Horizon',
         image: '/assets/summer_horizon.gif',
         desc: "The official closing video made for Summer Horizon, a tech bootcamp organized by Tech Syndicate, the tech club of AISG-46.",
         link: 'https://youtu.be/FpUHrM7xAug'
     },
-    8 : {
+    9 : {
         name: 'Oompalicious',
         image: '/assets/oompagg.webp',
         desc: "A promotional video of our product made for Exun 21 organized by DPS RK Puram.",
         link: 'https://youtu.be/Q6EDxWg7Y8w'
     },
-    9 : {
+    10 : {
         name: 'TedxYouth 2021',
         image: '/assets/tedx20.gif',
         desc: "The making of TedxYouth, a TED-talk event organized by AISG-46.",
