@@ -146,14 +146,14 @@ nav ul a{
 }
 
 .content{
-    margin-top: 2vw;
+    margin-top: 1vw;
     margin-left: 3vw;
     width: 30vw;
     color: var(--black);
 }
 
 .anim1 a{
-    color: blueviolet;
+    color: var(--black);
 }
 
 .tab-box{
@@ -252,7 +252,8 @@ nav ul a{
 
 @media screen and (max-width: 768px){
     html,body{
-        overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: scroll;
         width: 100vw;
         height: 100vh;
         margin: 0;
