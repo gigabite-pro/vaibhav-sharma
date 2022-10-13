@@ -142,7 +142,7 @@ projects = document.getElementById('projects');
 
 function showCodimg(){
     projects.innerHTML = ``
-    for(let i=1; i <= 14; i++){
+    for(let i=1; i <= 15; i++){
         projects.innerHTML += `<div class="card">
         <div class="proj-image" style="background-image: url('${codimgProjects[i].image}'); background-position: center; background-size: cover; background-repeat: no-repeat;">
         </div>
