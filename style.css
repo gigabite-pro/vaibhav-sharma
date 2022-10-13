@@ -289,7 +289,6 @@ nav ul a{
         justify-content: center;
         align-items: center;
         opacity: 0;
-        scale: 0;
     }
 
     .phone-nav nav{
