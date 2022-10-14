@@ -163,7 +163,7 @@ function showCodimg(){
 
 function showEditing(){
     projects.innerHTML = ``
-    for(let i=1; i <= 11; i++){
+    for(let i=1; i <= 10; i++){
         projects.innerHTML += `<div class="card bordered">
         <div class="proj-image" style="background-image: url('${youtubeProjects[i].image}'); background-position: center; background-size: cover; background-repeat: no-repeat;">
         </div>
