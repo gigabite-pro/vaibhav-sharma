@@ -283,13 +283,12 @@ nav ul a{
         height: 100%;
         position: absolute;
         background-color: var(--black);
-        top: -100%;
+        top: 0%;
         left: 100%;
         z-index: 6;
         display: flex;
         justify-content: center;
         align-items: center;
-        opacity: 0;
     }
 
     .phone-nav nav{
@@ -350,6 +349,8 @@ nav ul a{
     }
 
     .content{
+        text-align: justify;
+        margin-top: 5vw;
         width: 90vw;
         margin-left: 0vw;
         font-size: 4vw;
