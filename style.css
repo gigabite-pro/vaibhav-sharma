@@ -6,6 +6,7 @@ body{
     background-color: var(--white);
     --black: #2D2C2C;
     --white: white;
+    --a: lightblue;
 }
 
 .tk-blob{
@@ -70,6 +71,11 @@ body.dark{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: var(--white);
+}
+
+.modal-content a{
+    color: var(--white);
 }
 
 .modal-header{
